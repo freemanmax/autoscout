@@ -1,1 +1,24 @@
 <h1>Креирај Оглас</h1>
+
+<div>
+   <%= form_for :ad, url: ads_path do |f| %>
+      <p>
+         <%= f.label :marka, "Марка" %><br>
+         <%= f.select(:marka, options_for_select([['', ''], ['ALFA ROMEO', 'ALFA ROMEO'], ['ALPINE', 'ALPINE'], ['ASTON MARTIN', 'ASTON MARTIN'], ['AUDI', 'AUDI'],
+         ['AUSTIN-HEALEY', 'AUSTIN-HEALEY'], ['BENTLEY', 'BENTLEY'], ['BMW', 'BMW'], ['BMW-ALPINA', 'BMW-ALPINA'], ['BUICK', 'BUICK'],
+         ['CADILLAC', 'CADILLAC'], ['CHEVROLET', 'CHEVROLET'], ['CHRYSLER', 'CHRYSLER'], ['CITROEN', 'CITROEN'], ['DACIA', 'DACIA'],
+         ['DAEWOO', 'DAEWOO'], ['DAIHATSU', 'DAIHATSU'], ['DAIMLER', 'DAIMLER'], ['DODGE', 'DODGE'], ['DS AUTOMOBILES', 'DS AUTOMOBILES'],
+         ['FERRARI', 'FERRARI'], ['FIAT', 'FIAT'], ['FORD', 'FORD'], ['GMC', 'GMC'], ['HONDA', 'HONDA'], ['LOBSTER', 'LOBSTER'], ['HYUNDAI', 'HYUNDAI'],
+         ['INFINITI', 'INFINITI'], ['ISUZU', 'ISUZU'], ['JAGUAR', 'JAGUAR'], ['JEEP', 'JEEP'], ['KIA', 'KIA'], ['LAMBORGHINI', 'LAMBORGHINI'],
+         ['LANCIA', 'LANCIA'], ['COUNTRY ROVER', 'COUNTRY ROVER'], ['LEXUS', 'LEXUS'], ['LINCOLN', 'LINCOLN'], ['LOTUS', 'LOTUS'], ['MASERATI', 'MASERATI'],
+         ['MAZDA', 'MAZDA'], ['McLAREN', 'McLAREN'], ['MERCEDES BENZ', 'MERCEDES BENZ'], ['MG', 'MG'], ['MINI', 'MINI'], ['MITSUBISHI', 'MITSUBISHI'],
+         ['MORGAN', 'MORGAN'], ['NISSAN', 'NISSAN'], ['OPEL', 'OPEL'], ['PEUGEOT', 'PEUGEOT'], ['PLYMOUTH', 'PLYMOUTH'], ['PONTIAC', 'PONTIAC'],
+         ['PORSCHE', 'PORSCHE'], ['PUCH', 'PUCH'], ['RENAULT', 'RENAULT'], ['ROLLS-ROYCE', 'ROLLS-ROYCE'], ['ROVER', 'ROVER'], ['SAAB', 'SAAB'],
+         ['SEAT', 'SEAT'], ['SKODA', 'SKODA'], ['SMART', 'SMART'], ['SSANG YONG', 'SSANG YONG'], ['SUBARU', 'SUBARU'], ['SUZUKI', 'SUZUKI'], ['TESLA', 'TESLA'],
+         ['TOYOTA', 'TOYOTA'], ['TRIUMPH', 'TRIUMPH'], ['VOLVO', 'VOLVO'], ['VW', 'VW']])) %>
+      </p>
+      <p>
+         <%= f.submit %>
+      </p>
+   <% end %>
+</div>
