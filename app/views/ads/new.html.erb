@@ -4,7 +4,7 @@
    <%= form_for :ad, url: ads_path do |f| %>
       <p>
          <%= f.label :marka, "Марка" %><br>
-         <%= f.select(:marka, options_for_select([['', ''], ['ALFA ROMEO', 'ALFA ROMEO'], ['ALPINE', 'ALPINE'], ['ASTON MARTIN', 'ASTON MARTIN'], ['AUDI', 'AUDI'],
+         <%= f.select(:marka, options_for_select([['ALFA ROMEO', 'ALFA ROMEO'], ['ALPINE', 'ALPINE'], ['ASTON MARTIN', 'ASTON MARTIN'], ['AUDI', 'AUDI'],
          ['AUSTIN-HEALEY', 'AUSTIN-HEALEY'], ['BENTLEY', 'BENTLEY'], ['BMW', 'BMW'], ['BMW-ALPINA', 'BMW-ALPINA'], ['BUICK', 'BUICK'],
          ['CADILLAC', 'CADILLAC'], ['CHEVROLET', 'CHEVROLET'], ['CHRYSLER', 'CHRYSLER'], ['CITROEN', 'CITROEN'], ['DACIA', 'DACIA'],
          ['DAEWOO', 'DAEWOO'], ['DAIHATSU', 'DAIHATSU'], ['DAIMLER', 'DAIMLER'], ['DODGE', 'DODGE'], ['DS AUTOMOBILES', 'DS AUTOMOBILES'],
@@ -15,7 +15,16 @@
          ['MORGAN', 'MORGAN'], ['NISSAN', 'NISSAN'], ['OPEL', 'OPEL'], ['PEUGEOT', 'PEUGEOT'], ['PLYMOUTH', 'PLYMOUTH'], ['PONTIAC', 'PONTIAC'],
          ['PORSCHE', 'PORSCHE'], ['PUCH', 'PUCH'], ['RENAULT', 'RENAULT'], ['ROLLS-ROYCE', 'ROLLS-ROYCE'], ['ROVER', 'ROVER'], ['SAAB', 'SAAB'],
          ['SEAT', 'SEAT'], ['SKODA', 'SKODA'], ['SMART', 'SMART'], ['SSANG YONG', 'SSANG YONG'], ['SUBARU', 'SUBARU'], ['SUZUKI', 'SUZUKI'], ['TESLA', 'TESLA'],
-         ['TOYOTA', 'TOYOTA'], ['TRIUMPH', 'TRIUMPH'], ['VOLVO', 'VOLVO'], ['VW', 'VW']])) %>
+         ['TOYOTA', 'TOYOTA'], ['TRIUMPH', 'TRIUMPH'], ['VOLVO', 'VOLVO'], ['VW', 'VW']]), {include_blank: true}) %>
+      </p>
+      <p>
+         <%= f.label :model, "Модел" %><br>
+         <%= f.select(:noselect_marka, options_for_select([['', '']])) %>
+         <%= f.select(:model, options_for_select([['145', '145'], ['146', '146'], ['147', '147'], ['155', '155'], ['156', '156'], ['159', '159'],
+         ['164', '164'], ['166', '166'], ['1750', '1750'], ['33', '33'], ['4C', '4C'], ['6', '6'], ['75', '75'], ['8C', '8C'],['90', '90'],
+         ['ALFASUD', 'ALFASUD'], ['ALFETTA', 'ALFETTA'], ['ARNA', 'ARNA'], ['BRERA', 'BRERA'],['Giulia', 'Giulia'], ['GIULIETTA', 'GIULIETTA'],
+         ['GT', 'GT'], ['GTV', 'GTV'], ['MITO', 'MITO'], ['MONTREAL', 'MONTREAL'], ['SPIDER', 'SPIDER'],['STELVIO', 'STELVIO'],
+         ['ZAGATO', 'ZAGATO']]), {include_blank: true}, id: 'alfa_romeo') %>
       </p>
       <p>
          <%= f.submit %>

@@ -15,6 +15,6 @@ class AdsController < ApplicationController
 
   private
   def ad_params
-      params.require(:ad).permit(:marka)
+      params.require(:ad).permit(:marka, :model)
   end
 end
