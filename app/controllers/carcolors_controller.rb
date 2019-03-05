@@ -1,0 +1,2 @@
+class CarcolorsController < ApplicationController
+end

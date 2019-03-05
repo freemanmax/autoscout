@@ -1,0 +1,13 @@
+<h1>Креирај Марка</h1>
+
+<div>
+   <%= form_for :car, url: cars_path do |f| %>
+      <p>
+         <%= f.label :marka, "Марка" %><br>
+         <%= f.text_field(:marka) %>
+      </p>
+      <p>
+         <%= f.submit %>
+      </p>
+   <% end %>
+</div>

@@ -1,1 +1,29 @@
-<h1><%= @ad.marka %></h1>
+<h1>Марка</h1>
+<div><%= @car.name %></div>
+<h1>Модел</h1>
+<div><%= @carmodel.name %></div>
+<h1>Регистрација</h1>
+<div>
+   <% if (@ad.registracija == nil) %>
+       <div><%= "Не Регистрирана" %></div>
+   <% else %>
+     <% if (@ad.registracija.length == 21) %>
+         <div><%= "#{@ad.registracija[4]}/#{@ad.registracija[10]}/#{@ad.registracija[16]}#{@ad.registracija[17]}#{@ad.registracija[18]}#{@ad.registracija[19]}" %></div>
+     <% end %>
+     <% if (@ad.registracija.length == 22 && "#{@ad.registracija[4]}#{@ad.registracija[5]}".to_i > 9) %>
+         <div><%= "#{@ad.registracija[4]}#{@ad.registracija[5]}/#{@ad.registracija[11]}/#{@ad.registracija[17]}#{@ad.registracija[18]}#{@ad.registracija[19]}#{@ad.registracija[20]}" %></div>
+     <% end %>
+     <% if (@ad.registracija.length == 22 && "#{@ad.registracija[10]}#{@ad.registracija[11]}".to_i > 9) %>
+         <div><%= "#{@ad.registracija[4]}/#{@ad.registracija[10]}#{@ad.registracija[11]}/#{@ad.registracija[17]}#{@ad.registracija[18]}#{@ad.registracija[19]}#{@ad.registracija[20]}" %></div>
+     <% end %>
+     <% if (@ad.registracija.length == 23) %>
+         <div><%= "#{@ad.registracija[4]}#{@ad.registracija[5]}/#{@ad.registracija[11]}#{@ad.registracija[12]}/#{@ad.registracija[18]}#{@ad.registracija[19]}#{@ad.registracija[20]}#{@ad.registracija[21]}" %></div>
+     <% end %>
+   <% end %>
+</div>
+<h1>Боја</h1>
+  <% if (@ad.boja == nil) %>
+    <div><%= "Не Селектирана боја" %></div>
+  <% else %>
+    <div><span class="icon" style='background-color: <%= "#{@carcolor.rgb}" %>'></span><span><%= "#{@carcolor.name}" %></span></div>
+  <% end %>

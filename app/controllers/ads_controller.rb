@@ -1,8 +1,13 @@
 class AdsController < ApplicationController
   def new
+      @cars = Car.all
+      @carcolors = Carcolor.all
   end
   def show
       @ad = Ad.find(params[:id])
+      @car = Car.find_by(id: @ad.marka)
+      @carmodel = Carmodel.find_by(id: @ad.model)
+      @carcolor = Carcolor.find_by(id: @ad.boja)
   end
   def index
   end
@@ -15,6 +20,6 @@ class AdsController < ApplicationController
 
   private
   def ad_params
-      params.require(:ad).permit(:marka, :model)
+      params.require(:ad).permit(:marka, :model, :registracija, :konstrukcija, :boja)
   end
 end

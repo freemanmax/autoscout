@@ -10,23 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_13_155244) do
+ActiveRecord::Schema.define(version: 2019_02_27_163551) do
 
-  create_table "ads", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "registracija"
+  create_table "ads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "registracija"
     t.integer "kilometraza"
     t.integer "cena"
-    t.string "marka"
-    t.string "model"
-    t.string "gorivo"
-    t.string "menjac"
-    t.string "kategorija"
-    t.string "boja"
-    t.string "boja_enterier"
-    t.string "navigation_system"
-    t.string "air_conditioner"
-    t.string "headlights"
-    t.string "seat_covers"
+    t.integer "marka"
+    t.integer "model"
+    t.integer "gorivo"
+    t.integer "menjac"
+    t.integer "konstrukcija"
+    t.integer "boja"
+    t.integer "boja_enterier"
+    t.integer "navigation_system"
+    t.integer "air_conditioner"
+    t.integer "headlights"
+    t.integer "seat_covers"
+    t.integer "vuca"
+    t.integer "vrati"
+    t.boolean "tinted_windows", default: false
     t.boolean "alloy_wheels", default: false
     t.boolean "trailer_hitch", default: false
     t.boolean "bluetooth_interface", default: false
@@ -62,6 +65,32 @@ ActiveRecord::Schema.define(version: 2019_02_13_155244) do
     t.boolean "race_car", default: false
     t.boolean "tuning", default: false
     t.boolean "damaged", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carcolors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "rgb"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carconstructions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carmodels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "car_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,2 @@
+class Carconstruction < ApplicationRecord
+end

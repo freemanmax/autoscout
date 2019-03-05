@@ -1,1 +1,29 @@
-#alfa_romeo {display: none;}
+#ad_model {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+
+  display: block;
+  margin: 5px 0;
+  padding: 7px 50px 7px 10px;
+  background-color: #fff;
+  color: #fc0a1c;
+  border-radius: 4px;
+  border: 1px solid #8c969f;
+  width: 309px;
+}
+
+select:hover {
+  border: 1px solid #fc0a1c;
+}
+
+#ad_registracija_3i, #ad_registracija_2i, #ad_registracija_1i {
+  display: inline-block;
+  width: 100px;
+}

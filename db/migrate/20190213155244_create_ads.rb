@@ -1,20 +1,23 @@
 class CreateAds < ActiveRecord::Migration[5.2]
   def change
     create_table :ads do |t|
-      t.integer :registracija
+      t.string :registracija
       t.integer :kilometraza
       t.integer :cena
-      t.string :marka
-      t.string :model
-      t.string :gorivo
-      t.string :menjac
-      t.string :kategorija
-      t.string :boja
-      t.string :boja_enterier
-      t.string :navigation_system
-      t.string :air_conditioner
-      t.string :headlights
-      t.string :seat_covers
+      t.integer :marka
+      t.integer :model
+      t.integer :gorivo
+      t.integer :menjac
+      t.integer :konstrukcija
+      t.integer :boja
+      t.integer :boja_enterier
+      t.integer :navigation_system
+      t.integer :air_conditioner
+      t.integer :headlights
+      t.integer :seat_covers
+      t.integer :vuca
+      t.integer :vrati
+      t.boolean :tinted_windows, :default => false
       t.boolean :alloy_wheels, :default => false
       t.boolean :trailer_hitch, :default => false
       t.boolean :bluetooth_interface, :default => false
