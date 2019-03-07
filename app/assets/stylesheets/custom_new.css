@@ -3,24 +3,35 @@
 }
 
 select {
+  outline: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   -ms-appearance: none;
   appearance: none;
-
   display: block;
   margin: 5px 0;
   padding: 7px 50px 7px 10px;
+  background: url(select/dd_gray.png) no-repeat right;
   background-color: #fff;
-  color: #fc0a1c;
+  color: #77bbd8;
   border-radius: 4px;
   border: 1px solid #8c969f;
   width: 309px;
+  font-weight: bold;
 }
 
 select:hover {
   border: 1px solid #fc0a1c;
+  background: url(select/dd_red.png) no-repeat right;
+}
+select:focus {
+  border: 1px solid #fc0a1c;
+  background: url(select/dd_red.png) no-repeat right;
+}
+
+option {
+  font-weight: bold;
 }
 
 #ad_registracija_3i, #ad_registracija_2i, #ad_registracija_1i {
