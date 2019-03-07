@@ -9,15 +9,14 @@ $(document).ready(function(){
       escaped_marka = marka.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
       options = $(models).filter("optgroup[label='" + escaped_marka + "']").html();
       console.log(options);
-      if (options) {
-        $('#ad_noselect_marka').hide();
-        $('#ad_model').show();
+      if ((options) != null) {
+        $('#ad_model').empty();
         $('#ad_model').html(options);
       }
       else {
         $('#ad_model').empty();
+        $('#ad_model').html('<option value=""></option>');
       }
     });
   });
-
 });
