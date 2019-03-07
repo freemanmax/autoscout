@@ -9,7 +9,6 @@
     </div>
     <div>
       <%= f.label :model, "Модел" %><br>
-      <%= f.select(:noselect_marka, options_for_select([['', '']]), {}) %>
       <%= f.grouped_collection_select :model, Car.order(:name), :carmodels, :name, :id, :name, {include_blank: true} %>
     </div>
     <div>
