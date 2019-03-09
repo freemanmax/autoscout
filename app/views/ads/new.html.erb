@@ -5,7 +5,6 @@
     <div>
       <%= f.label :marka, "Марка" %><br>
       <%= f.select(:marka, Car.all.collect {|c| [ c.name, c.id ]}, {include_blank: true}) %>
-
     </div>
     <div>
       <%= f.label :model, "Модел" %><br>
